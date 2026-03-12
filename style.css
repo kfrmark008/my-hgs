@@ -1,0 +1,182 @@
+/* ============================ */
+/* GLOBAL STYLES                */
+/* ============================ */
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* ============================ */
+/* SCREENS                      */
+/* ============================ */
+
+.screen {
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+}
+
+/* Clickable links on screens */
+.screen a {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  animation: fadeIn 1s forwards;
+}
+
+.screen a:hover {
+  text-decoration: underline;
+}
+
+/* ============================ */
+/* VALENTINE SCREEN             */
+/* ============================ */
+
+#valentineScreen {
+  background-color: #fd405f;
+}
+
+#typing {
+  font-size: 32px;
+  color: #b0005f;
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#heyBtn {
+  background-color: #ff4d88;
+  color: white;
+}
+
+#whoBtn {
+  background-color: white;
+  color: #ff4d88;
+  position: absolute;
+}
+
+/* ============================ */
+/* FRIENDS SCREEN               */
+/* ============================ */
+
+#friendsScreen {
+  background-color: #fd405f;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* top-aligned to prevent video pushing content */
+  padding-top: 50px;
+}
+
+/* Friends message card */
+.friends-card {
+  width: 75%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 20px; /* spacing between card and video */
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Video section */
+.video-section {
+  display: flex;
+  justify-content: center;
+}
+
+video {
+  max-width: 300px; /* keeps layout balanced */
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* ============================ */
+/* HEARTS                       */
+/* ============================ */
+
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 5s linear forwards;
+  color: #ff4d88;
+  opacity: 0.8;
+}
+
+/* ============================ */
+/* CURSOR                       */
+/* ============================ */
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+/* ============================ */
+/* ANIMATIONS                   */
+/* ============================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+#msg-text{
+    padding:20px;
+    background:white;
+    text-align:center;
+}
+
+/* Buttons inside the friends card */
+.card-buttons {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 20px; /* space between buttons */
+  margin-top: 20px; /* space from text */
+}
+
+.card-buttons button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff4d88;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.card-buttons button:hover {
+  transform: scale(1.05); /* small hover effect */
+}
